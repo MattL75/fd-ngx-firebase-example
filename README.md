@@ -4,8 +4,8 @@ Intended as a showcase of fundamental-ngx components and their capabilities. The
 
 ## Versions
 ```
-fiori-fundamentals: 1.5.5
-fundamental-ngx: 0.4.5
+fiori-fundamentals: 1.5.8
+fundamental-ngx: 0.5.2
 ```
 ## Development server
 
