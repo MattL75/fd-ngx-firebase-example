@@ -45,8 +45,12 @@ export class CreateContractModalComponent implements OnInit {
 
     submitForm(): void {
         const tmpObj = this.contractForm.getRawValue();
-        tmpObj.date_signed = this.selectedDay.date;
+        tmpObj.date_signed = tmpObj.date_signed.date;
         this.modalRef.close(tmpObj);
+    }
+
+    printForm(): void {
+        console.log(this.contractForm);
     }
 
 }

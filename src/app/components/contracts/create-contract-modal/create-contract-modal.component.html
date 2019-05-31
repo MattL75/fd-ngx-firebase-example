@@ -38,8 +38,7 @@
                 <div fd-form-item>
                     <label fd-form-label
                            for="datepicker-input">Date signed: </label>
-                    <fd-date-picker [(ngModel)]="selectedDay"
-                                    [ngModelOptions]="{standalone: true}"
+                    <fd-date-picker formControlName="date_signed"
                                     id="datepicker-input"></fd-date-picker>
                 </div>
             </div>
@@ -97,9 +96,13 @@
             fdType="main"
             type="submit"
             form="main-form"
-            [disabled]="!contractForm.dirty || contractForm.invalid">{{editMode ? 'Edit' : 'Create'}}</button>
+            [disabled]="!contractForm.dirty || contractForm.invalid">
+        {{editMode ? 'Edit' : 'Create'}}
+    </button>
     <button fd-button
             fdType="light"
             style="margin-left: 16px;"
-            (click)="this.modalRef.dismiss()">Cancel</button>
+            (click)="this.modalRef.dismiss(); this.printForm()">
+        Cancel
+    </button>
 </fd-modal-footer>
